@@ -16,7 +16,6 @@ def browser(request):
     chrome_options.add_experimental_option('prefs', {'intl.accept_languages': language})
     # Инициализируем браузер с заданными опциями
     browser = webdriver.Chrome(options=chrome_options)
-    time.sleep(5)
     yield browser
     print("\nquit browser..")
     browser.quit()
