@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class BasePageLocators:
+    BASKET_LINK = (By.CSS_SELECTOR, ".btn-group > :nth-child(1)")
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 
@@ -20,3 +21,8 @@ class ProductPageLocators:
     MESSAGE_WITH_BASKET_TOTAL = (By.CSS_SELECTOR, ".alertinner p:nth-child(1)")
     BASKET_TOTAL = (By.CSS_SELECTOR, ".alertinner p:nth-child(1) strong")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
+
+
+class BasketPageLocators:
+    MESSAGE_THAT_BASKET_IS_EMPTY = (By.XPATH, "//p[contains(text(), 'basket is empty')]")
+    PRODUCT = (By.CSS_SELECTOR, ".basket-items")
